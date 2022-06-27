@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+
+:root {
+    --success: chartreuse;
+    --danger: rgb(255, 0, 0);
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blanchedalmond;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.container {
+    border: 2px dashed rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 2rem;
+    padding: 1rem;
+    width: 500px;
+    background-color: rgb(205, 229, 230);
+    box-shadow: 0 5px 75px rgba(205, 229, 230, 1);
+}
+
+
+.container h1 {
+    text-align: center;
+}
+
+.container .form {
+    text-align: center;
+}
+
+.form {
+    padding: 30px 40px;
+    width: 100%;
+}
+
+.form hr {
+    opacity: 0.2;
+}
+
+.form-control {
+    position: relative;
+    margin: 25px 0px;
+}
+
+.form-control label {
+    text-align: start;
+    display: block;
+    margin: 5px 0px;
+}
+
+.form-control input {
+    display: block;
+    padding: 5px;
+    margin: 10px 0px;
+    border: 2px solid rgba(63, 57, 57, 0.616);
+    border-radius: 5px;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+
+.form-control input:focus {
+    border-color: aqua;
+    outline: none;
+}
+
+
+
+.form-control.success input {
+    border-color: var(--success);
+}
+
+
+.form-control.error input {
+    border-color: var(--danger);
+}
+
+
+.form-control small {
+    display: flex;
+    justify-content: start;
+    color: var(--danger);
+    visibility: hidden;
+}
+
+
+.form-control.error small {
+    visibility: visible;
+}
+
+
+.form button {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: aliceblue;
+    border: 2px rgb(0, 0, 0);
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    padding: 15px 30px;
+    transition: 0.2s all;
+}
+
+
+.form button:hover {
+    background-color: black;
+    color: aliceblue;
+}

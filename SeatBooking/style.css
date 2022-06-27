@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+
+:root {
+    --selected: rgb(0, 150, 187);
+    --occupied: red;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: dimgrey;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.movie-container {
+    margin: 20px 0;
+}
+
+
+.movie-container select {
+    background-color: #fff;
+    border: 0;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+.seat {
+    background-color: #fff;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    transition: all 0.2s ease;
+}
+
+
+
+.container {
+    margin-bottom: 50px;
+}
+
+.container .seat.selected {
+    background-color: var(--selected);
+}
+
+
+.container .seat.occupied {
+    background-color: var(--occupied);
+}
+
+
+
+
+.container .seat:not(.occupied):hover {
+    cursor: pointer;
+    background-color: var(--selected);
+    transform: scale(1.5);
+}
+
+
+.showcase {
+    background-color: rgba(10, 10, 44, 0.3);
+    padding: 15px;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+
+.showcase li {
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    display: flex;
+}
+
+.showcase li small {
+    margin-left: 10px;
+}
+
+.showcase .seat.selected {
+    background-color: var(--selected);
+}
+
+.showcase .seat.occupied {
+    background-color: var(--occupied);
+}
+
+
+.showcase .seat:hover {
+    cursor: default;
+
+}
+
+
+.screen {
+    background-color: #fff;
+    margin: 20px 0;
+    height: 90px;
+    width: 100%;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.6);
+}
+
+.row {
+    display: flex;
+    margin: 5px 0;
+}
